@@ -1,12 +1,19 @@
 <div class="card">
     <div class="card-header">
-        <h3>Book1</h3>
+        <h3>{{title}}</h3>
     </div>
     <div class="card-content">
-        <img src="./images/backgrounds/not-image.png">
-        <p>
-            Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. 
-        </p>
-        <a class="card-button" href="#components/detail.html">Ver Detalle</a>
+            <div class="image-card">
+                <img src="{{imageLinks}}">
+            </div>
+            <div class="text-card">
+                <p>
+                    {{publisher}}
+                </p>
+                <p>
+                    {{publishedDate}}
+                </p>
+            </div>        
+        <a class="card-button" href="{{routeLink}}">Ver Detalle</a>
     </div>
 </div>
