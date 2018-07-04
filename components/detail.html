@@ -11,3 +11,20 @@
 
     <div class="book" id="book">                              
     </div> 
+
+    <script id="templateBook" type="text/ractive">
+        <h1>{{title}}</h1>
+        <div class="book-description"> 
+            <p>
+                {{publisher}}
+
+            </p>
+            <p>
+                {{publishedDate}}
+
+            </p>
+        </div>
+        <div class="book-image">
+            <img src="{{imageLinks.smallThumbnail}}">
+        </div>  
+    </script>

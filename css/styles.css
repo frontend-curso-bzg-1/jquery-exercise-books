@@ -7,17 +7,6 @@
     --button-border-color: rgba(83, 156, 252, 1);
 }
 
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1em;
-}
-
 body {
     width: 100%;
     margin: 0;    
@@ -27,26 +16,15 @@ h1, h2, h3 {
     color: var(--main-title-color);
 }
 
-input, select {
-    padding: 8px 4px;
-    font-size: 1em;
-    border: 1px solid var(--input-border-color);
-}
 
-ul {
-    padding: 0;
-}
 
 input:focus, select:focus, textarea:focus {
     outline: none;
 }
 
 header.top-header {
-    width: 100%; 
-    min-width: 700px;   
-    height: 50px;
-    background-color:var(--main-style-color);
-    padding: 0;
+    min-height: 50px;
+    background-color:var(--main-style-color);    
     position: relative;    
     z-index: 500;        
 }
@@ -56,9 +34,6 @@ header.top-header h1 {
     font-size: 1.4em;    
 }
 
-header.top-header .left-header {
-    float: left;        
-}
 
 header.top-header .left-header .toggle-sidebar {
     color: var(--main-title-color);
@@ -77,18 +52,12 @@ header.top-header .left-header .toggle-sidebar > i {
 
 
 
-header.top-header .right-header {
-    float: right;
-    margin-right: 10%;
-    display: flex;
-    flex-wrap: nowrap; 
+header.top-header .right-header {       
     height: 50px;
     padding: 2px 0;   
 }
 
-header.top-header .right-header .top-form {
-    flex: 1 1 50%;
-    order: 1;
+header.top-header .right-header .top-form {    
     padding: 5px;
 }
 
@@ -97,17 +66,11 @@ header.top-header .right-header input.inputSearch {
 
 }
 
-header.top-header .right-header a.link-profile {
-    flex: 1 1 50%;
-    order: 2;
+header.top-header .right-header a.link-profile {    
     padding: 15px;
     font-size: 1.6em;
 }
 
-section.content-section {
-    display: flex;
-    flex-wrap: wrap;    
-}
 
 aside.left-aside {
     width: 300px;
@@ -188,39 +151,15 @@ section.main-section.main-collape {
     width: calc(100% - 50px);
 }
 
-ul.breadcrumb {
-   list-style-type: none;
-   background-color: var(--header-back-color);
-   padding: 5px 3px; 
-}
-
-ul.breadcrumb > li {
-    display: inline-block;
-}
-
-ul.breadcrumb > li+li::before {
-    content: "\002F";
-    color: var(--main-style-color);
-}
-
-ul.breadcrumb > li > a {
-    padding: 0 5px;
-    font-size: .7em;    
-} 
-
-section.content {
-    display: flex;
-    flex-wrap: wrap;
+section.content {    
 }
 
 div.card {
-    flex: 1 1 30%;
+    
     border: 1px solid var(--input-border-color);
     border-radius: 10px;
     margin-left: 10px;
-    margin-bottom: 10px;
-    max-width: 30%;
-    min-width: 300px;
+    margin-bottom: 10px;    
 }
 
 div.card-header {

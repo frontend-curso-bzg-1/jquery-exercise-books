@@ -5,6 +5,13 @@ var routes = [
         "controller": function(){
             $.getJSON('./js/books.json').done(function(response){
                 let items = response.items;
+                var ract = new Ractive({
+                    target: "#books",
+                    template: "#templateBooks",
+                    data: {items: items}
+                });
+                
+                /**
                 let template;
 
                 $.ajax(
@@ -44,6 +51,7 @@ var routes = [
                         }
                     }
                 );
+                 */
         
                 
             });
@@ -60,6 +68,13 @@ var routes = [
                     return elem.id == id;
                 });
 
+                var ract = new Ractive({
+                    target: "#book",
+                    template: "#templateBook",
+                    data: item.volumeInfo
+                });
+
+                /**
                 let template;
 
                 $.ajax({
@@ -90,6 +105,7 @@ var routes = [
                         console.log(status);
                     }
                 });
+                 */
 
             });
         }

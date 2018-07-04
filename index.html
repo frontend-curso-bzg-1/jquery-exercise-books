@@ -6,66 +6,94 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link id="favicon" rel="shortcut icon" type="image/x-icon" href="favicon.ico"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <link rel="stylesheet" href="./css/styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/index.js"></script>
+
+  
 </head>
 <body>
-<header class="top-header">
-    <div class="left-header">
-        <a class="toggle-sidebar"><i class="fa fa-bars"></i></a>
-        <h1>My Books App</h1>
+<div class="container-fluid">
+    <div class="row">
+            <header class="col-12 top-header">
+                <div class="row justify-content-between">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3  left-header">
+                            <a class="toggle-sidebar"><i class="fa fa-bars"></i></a>
+                            <h1>My Books App</h1>
+                        </div>
+                    
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 right-header">
+                            <div class="row align-items-center top-form">
+                                    <div class="col-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="link-profile"><i class="fa fa-user-circle"></i></a>
+                                    </div>
+                            </div>                            
+                            
+                        </div>
+                </div>                                
+            </header>
     </div>
+    <div class="row">
+            <section class="content-section"> 
+                <aside class="left-aside">
+                    <div class="header-aside">
+                        <div class="user-image">
+                            <img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png">
+                        </div>
+                        <div class="user-info">
+                            <h3>Nombre Usuario</h3>
+                        </div>                        
+                    </div>
+                    <div class="content-aside">
+                        <ul class="nav flex-column main-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/">
+                                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                                    <span>Inicio</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#/collections">
+                                    <i class="fa fa-book" aria-hidden="true"></i>
+                                    <span>Colección</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <span>Favoritos</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                                    <span>Salir</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <section class="main-section">
+                    <div id="content"></div>
+                </section>
+            </section>
+    </div>
+        
+        
+</div>
 
-    <div class="right-header">
-        <div class="top-form"><input type="text" name="searchText" id="searchInput" class="inputSearch"></div>
-        <a class="link-profile"><i class="fa fa-user-circle"></i></a>
-    </div>
-    
-</header>
-<section class="content-section"> 
-    <aside class="left-aside">
-        <div class="header-aside">
-            <div class="user-image">
-                <img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png">
-            </div>
-            <div class="user-info">
-                <h3>Nombre Usuario</h3>
-            </div>                        
-        </div>
-        <div class="content-aside">
-            <ul class="main-menu">
-                <li>
-                    <a href="#/">
-                        <i class="fa fa-tachometer" aria-hidden="true"></i>
-                        <span>Inicio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/collections">
-                        <i class="fa fa-book" aria-hidden="true"></i>
-                        <span>Colección</span>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <span>Favoritos</span>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <i class="fa fa-power-off" aria-hidden="true"></i>
-                        <span>Salir</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </aside>
-    <section class="main-section">
-        <div id="content"></div>
-    </section>
-</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/ractive"></script>
+<script src="./js/index.js"></script>
 </body>
 </html>
