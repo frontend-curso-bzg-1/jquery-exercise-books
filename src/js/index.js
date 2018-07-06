@@ -1,3 +1,5 @@
+import '../assets/css/styles.css';
+
 var routes = [
     {
         "path": "/",
