@@ -1,18 +1,21 @@
 import '../assets/css/styles.css';
+import Ractive from 'ractive/ractive.min.js';
+
+
 
 var routes = [
     {
         "path": "/",
         "component": "list.html",
         "controller": function(){
-            $.getJSON('./js/books.json').done(function(response){
+            $.getJSON('./data/books.json').done(function(response){
                 let items = response.items;
                 var ract = new Ractive({
                     target: "#books",
                     template: "#templateBooks",
                     data: {items: items}
-                });
-                
+                });                
+
                 /**
                 let template;
 
@@ -64,7 +67,7 @@ var routes = [
         "path": "/detail/:id",
         "component": "detail.html",
         "controller": function(id){
-            $.getJSON('./js/books.json').done(function(response){
+            $.getJSON('./data/books.json').done(function(response){
                 let items = response.items;
                 let item = items.find(function(elem){
                     return elem.id == id;
@@ -196,32 +199,6 @@ function getContent(url, callback, param){
             }
         },
         error: function(error){
-            console.log(error);
-        },
-        complete: function(xhr, status){
-            console.log(status);
-        }
-    });
-}
-
-function loadBooks(){
-    
-
-    $.ajax({
-        url: './components/list.html',
-        type: 'GET',
-        dataType: 'text',
-        success: function(response) {
-            
-            $("#content").html(response);
-
-            
-
-            
-        
-
-        },
-        error: function(error) {
             console.log(error);
         },
         complete: function(xhr, status){

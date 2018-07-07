@@ -5,16 +5,24 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server",
-    "build": "webpack"
+    "dev": "lite-server -c configs/my-config.json",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
     "lite-server": "^2.3.0",
+    "ractive": "^0.10.4",
     "style-loader": "^0.21.0",
     "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   }
 }
