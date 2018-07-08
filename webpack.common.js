@@ -1,5 +1,3 @@
-
-
 const path = require('path');
 const HtmlWebpackPLugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -13,6 +11,11 @@ module.exports = {
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, 'dist')
+    },
+    optimization: {
+        splitChunks: {
+        chunks: 'all'
+      }
     },
     module: {
         rules: [
@@ -41,10 +44,5 @@ module.exports = {
         new webpack.ProvidePlugin({
             Ractive: 'ractive/ractive.min.js'
         })
-    ],
-    devtool: 'inline-source-map',
-    devServer: {
-      contentBase: './dist'
-    },
-    mode: "development"
+    ]
 }

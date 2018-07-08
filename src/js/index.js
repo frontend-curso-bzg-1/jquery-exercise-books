@@ -1,5 +1,5 @@
 import '../assets/css/styles.css';
-import Ractive from 'ractive/ractive.min.js';
+//import Ractive from 'ractive/ractive.min.js';
 
 
 
