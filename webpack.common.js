@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        app: "./src/js/index.js"
+        app: "./src/js/index.ts"
     },
     output: {
         filename: "[name].bundle.js",
@@ -19,8 +19,16 @@ module.exports = {
     },
     module: {
         rules: [
-            {test: /\.css$/, use: ['style-loader', 'css-loader' ]}
+            {test: /\.css$/, use: ['style-loader', 'css-loader' ]},
+            {
+                test: /\.ts$/,
+                use: ['ts-loader'],
+                exclude: /node_modules/
+            }
         ]
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js']
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
